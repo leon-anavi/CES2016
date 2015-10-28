@@ -1,0 +1,4 @@
+[gerrit]
+host=gerrit.automotivelinux.org
+port=29418
+project=AGL/DemoApps/CES2016
