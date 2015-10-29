@@ -1,5 +1,4 @@
-# HMI_ui
-Open source HMI ui (open version of HMI_app_fw) git repository
+Open source QML UI
 
 To run on target:
 qmlscene -I imports Main.qml
