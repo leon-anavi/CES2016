@@ -1,0 +1,4 @@
+singleton CallListModel 1.0 CallListModel.qml
+singleton ContactsModel 1.0 ContactsModel.qml
+singleton FavoritesModel 1.0 FavoritesModel.qml
+singleton PhoneModel 1.0 PhoneModel.qml

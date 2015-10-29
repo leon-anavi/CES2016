@@ -1,0 +1,2 @@
+singleton HVACModel 1.0 HVACModel.qml
+singleton TemperatureModel 1.0 TemperatureModel.qml

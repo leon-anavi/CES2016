@@ -1,0 +1,32 @@
+import QtQuick 2.0
+import components 1.0
+import system 1.0
+import utils 1.0
+
+App {
+    appId: "fingerprint"
+    property string appState: ""
+
+    DateTime {
+        y: 10
+        anchors.leftMargin: 40
+        anchors.rightMargin: 40
+    }
+
+    FingerprintMenu {
+        visible: appState === ""
+        onCreateProfile: appState = "createProfile"
+        onOpenProfile: appState = "createRecord"
+    }
+
+    CreateProfile {
+        visible: appState == "createProfile"
+        onMenu: appState = ""
+        onCreateProfile: appState = "createRecord"
+    }
+
+    CreateFingerRecord {
+        visible: appState === "createRecord"
+        onMenu: appState = ""
+    }
+}

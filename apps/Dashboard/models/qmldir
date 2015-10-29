@@ -1,0 +1,3 @@
+singleton CarsModel 1.0 CarsModel.qml
+singleton TireModel 1.0 TireModel.qml
+singleton TripModel 1.0 TripModel.qml

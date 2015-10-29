@@ -1,0 +1,10 @@
+AwesomeIcon 1.0 AwesomeIcon.qml
+Box 1.0 Box.qml
+BoxButton 1.0 BoxButton.qml
+BoxHeading 1.0 BoxHeading.qml
+DateTime 1.0 DateTime.qml
+HexGrid 1.0 HexGrid.qml
+HexSwitch 1.0 HexSwitch.qml
+Label 1.0 Label.qml
+NumberPad 1.0 NumberPad.qml
+Button 1.0 Button.qml
