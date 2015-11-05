@@ -5,8 +5,10 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import QtQuick 2.0
-import QtQuick.Controls 1.3
-import QtQuick.Controls.Styles 1.3
+//import QtQuick.Controls 1.3
+//import QtQuick.Controls.Styles 1.3
+import QtQuick.Controls 1.2
+import QtQuick.Controls.Styles 1.2
 import components 1.0
 import system 1.0
 import utils 1.0

@@ -6,7 +6,7 @@
 
 import QtQuick 2.0
 import system 1.0
-import com.pelagicore.qmldevinfo 0.1
+//import com.pelagicore.qmldevinfo 0.1
 
 Item {
     height: 120
@@ -45,9 +45,9 @@ void main(void) {
         }
     }
 
-    DevInfo {
-        id: devinfo
-    }
+//    DevInfo {
+//        id: devinfo
+//    }
 
     Image {
         anchors.centerIn: parent
@@ -67,10 +67,10 @@ void main(void) {
             visible: false
             anchors.fill: parent
 
-            Text {
-                text: "IP: " + (devinfo.ipAddresses.length ? devinfo.ipAddresses.join("\n") : " ")
-                anchors.fill: parent
-            }
+//            Text {
+//                text: "IP: " + (devinfo.ipAddresses.length ? devinfo.ipAddresses.join("\n") : " ")
+//                anchors.fill: parent
+//            }
         }
     }
 

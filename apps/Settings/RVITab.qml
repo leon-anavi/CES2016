@@ -5,7 +5,8 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import QtQuick 2.0
-import QtQuick.Controls 1.3
+//import QtQuick.Controls 1.3
+import QtQuick.Controls 1.2
 
 Tab {
     id: root
