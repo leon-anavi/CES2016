@@ -1,0 +1,16 @@
+import QmlProject 1.1
+
+Project {
+    mainFile: "Main.qml"
+    importPaths: "imports"
+
+    QmlFiles {
+        directory: "."
+    }
+    JavaScriptFiles {
+        directory: "."
+    }
+    ImageFiles {
+        directory: "."
+    }
+}
