@@ -4,7 +4,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-import QtQuick 2.0
+import QtQuick 2.3
 import "apps/Browser"
 import "apps/Cameras"
 import "apps/Dashboard"
@@ -84,13 +84,9 @@ Item {
 
     Keyboard {
         id: keyboard
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: System.showKeyboard ? 0 : -height
-        visible: anchors.bottomMargin > -height
+        y: System.showKeyboard ? parent.height - height : parent.height
         width: parent.width
 
-        Behavior on anchors.bottomMargin {
-            NumberAnimation { duration: 300; easing.type: Easing.OutQuad }
-        }
+        Behavior on y { YAnimator { duration: 300; easing.type: Easing.OutQuad }}
     }
 }
