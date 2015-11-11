@@ -52,7 +52,7 @@ void main(void) {
     Image {
         anchors.centerIn: parent
         anchors.horizontalCenterOffset: -15
-        source: "images/JLR-Logo.png"
+        source: "images/AGL-Logo.png"
         height: 80
         fillMode: Image.PreserveAspectFit
 
