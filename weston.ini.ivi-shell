@@ -1,0 +1,13 @@
+[core]
+shell=ivi-shell.so
+
+#[shell]
+#locking=true
+# Uncomment below to hide panel
+#panel-location=none
+[ivi-shell]
+ivi-module=ivi-controller.so,wl-shell-emulator.so
+
+[output]
+name=HDMI1
+transform=90
