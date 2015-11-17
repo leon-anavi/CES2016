@@ -7,6 +7,7 @@
 pragma Singleton
 
 import QtQuick 2.0
+import amb 0.1
 
 Item {
     property bool metric: false
@@ -15,25 +16,22 @@ Item {
         return (metric ? 1.60934 : 1 ) * value
     }
 
-    property real baseMaxSpeed: 120
-    property real textSpeed: 0
-    property real currentSpeed: percentage * max * 0.01
-    property real max: Math.ceil(mphToKph(baseMaxSpeed) / 30) * 30
-    property real percentage: 0
+    property real baseMaxSpeed: 255
+    property real textSpeed: prop.value
+    property real percentage: textSpeed / baseMaxSpeed * 100
 
-    Timer {
-        interval: 100
-        repeat: true
-        running: true
+    AutomotivePropertyItem {
+        id: prop
 
-        onTriggered: textSpeed = currentSpeed
+        objectName: "VehicleSpeed"
+        propertyName: "Speed"
+
+        Component.onCompleted: prop.connect();
     }
 
-    NumberAnimation on percentage {
-        from: 100
-        to: 0
-        duration: 15000
-        loops: Animation.Infinite
-        easing.type: Easing.CosineCurve
+    Behavior on percentage {
+        SmoothedAnimation {
+            velocity: 100
+        }
     }
 }

@@ -18,7 +18,7 @@ App {
         vehicle_container.vehicleImage = vehicle.image
         FuelModel.baseTank = vehicle.tank
         FuelModel.baseAverage = vehicle.mpg
-        SpeedModel.baseMaxSpeed = vehicle.speed
+//      SpeedModel.baseMaxSpeed = vehicle.speed
     }
 
     Component.onCompleted: changeVehicle(CarsModel.get(1))
