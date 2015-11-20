@@ -9,7 +9,7 @@
 #include <QWaylandInputDevice>
 
 SimpleCompositor::SimpleCompositor()
-    : QWaylandQuickCompositor(this, 0, DefaultExtensions | SubSurfaceExtension)
+    : QWaylandQuickCompositor(0, DefaultExtensions | SubSurfaceExtension)
 {
 }
 
