@@ -19,6 +19,7 @@ void SimpleCompositor::setSource(const QUrl &fileName) {
     setColor(Qt::black);
     winId();
     addDefaultShell();
+    createOutput(this, "", "");
 
     connect(this, &SimpleCompositor::afterRendering, this, &SimpleCompositor::sendCallbacks);
 }
