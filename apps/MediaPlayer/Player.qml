@@ -8,20 +8,31 @@ import QtQuick 2.0
 import QtMultimedia 5.0 as Media
 
 Item {
+    id: playerItem
     width: 900
     height: childrenRect.height
 
     property alias source: player.source
+    property alias albumart: songsinfo.source
+    property bool beginning: true
+
+    signal send(string cmd)
+
+    function play() {
+        player.autoPlay = !beginning
+        beginning = false
+    }
 
     Media.MediaPlayer {
         id: player
     }
-    
+
     Column {
         anchors.horizontalCenter: parent.horizontalCenter
         spacing: 20
 
         SongInfo {
+            id: songsinfo
             anchors.left: parent.left
             metadata: player.metaData
         }

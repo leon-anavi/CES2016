@@ -9,13 +9,20 @@ import QtMultimedia 5.0 as Media
 
 Row {
     property var player
+    property var button
+
     spacing: 100
 
     MediaButton {
         anchors.verticalCenter: parent.verticalCenter
         icon: "previous"
         adjust: -6
-        onClicked: active = !active
+        onClicked: {
+            active = !active
+            button = this
+            timer.start()
+            playerItem.send("PREVIOUS")
+        }
     }
 
     MediaButton {
@@ -44,7 +51,12 @@ Row {
         anchors.verticalCenter: parent.verticalCenter
         icon: "next"
         adjust: -6
-        onClicked: active = !active
+        onClicked: {
+            active = !active
+            button = this
+            timer.start()
+            playerItem.send("NEXT")
+        }
     }
 
     MediaButton {
@@ -59,5 +71,15 @@ Row {
         icon: "repeat"
         adjust: -2
         onClicked: active = !active
+    }
+
+    Timer {
+        id: timer
+        interval: 200
+        repeat: false
+        running: false
+        onTriggered: {
+            button.active = false
+        }
     }
 }

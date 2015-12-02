@@ -9,13 +9,19 @@ import utils 1.0
 
 Row {
     property var metadata
+    property alias source: albumart.source
+
+    spacing: 30
 
     function unknown(v, alt) {
         return v ? v : alt
     }
 
     Image {
+        id: albumart
         source: "images/cover_album.png"
+        width: 238
+        height: 238
     }
 
     Column {

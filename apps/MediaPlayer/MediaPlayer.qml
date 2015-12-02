@@ -13,6 +13,7 @@ App {
     width: 1080
 
     Column {
+        id: col
         anchors.top: parent.top
         anchors.topMargin: 100
         width: parent.width
@@ -43,8 +44,28 @@ App {
         }
 
         Player {
+            id: player
             anchors.horizontalCenter: parent.horizontalCenter
-            source: "song.mp3"
+            source: songsList.file
+            albumart: songsList.image
+            onSend: songsList.listControl(cmd)
         }
+
+        Rectangle {
+            width: parent.width
+            height: 2
+            color: Style.blueViv
+        }
+    }
+
+    SongsList {
+        id: songsList
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: col.bottom
+        anchors.topMargin: 58
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 50
+        clip: true
+        onCurrentIndexChanged: player.play()
     }
 }
