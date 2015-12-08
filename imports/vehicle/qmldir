@@ -7,3 +7,4 @@
 singleton FuelModel 1.0 FuelModel.qml
 singleton SpeedModel 1.0 SpeedModel.qml
 singleton TemperatureModel 1.0 TemperatureModel.qml
+singleton PositionModel 1.0 PositionModel.qml
