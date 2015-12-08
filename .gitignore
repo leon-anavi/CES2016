@@ -1,0 +1,5 @@
+*.pro.user
+*.autosave
+*.bak
+*.qmlproject.user
+.qmake.stash
