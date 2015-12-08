@@ -2,7 +2,7 @@ import QmlProject 1.1
 
 Project {
     mainFile: "Scaled.qml"
-    importPaths: "imports"
+    importPaths: ["imports" , "dummyimports"]
 
     QmlFiles {
         directory: "."
