@@ -15,4 +15,9 @@ https://creativecommons.org/licenses/by/4.0/legalcode
 (Optional) switch shell for weston to ivi-shell and start demo apps if you want to start demo apps with ivi-shell.
 $ cd /opt/AGL/CES2016
 $ ./switch_to_ivi-shell
-$ ./start_CES2016_ivi-shell.sh
+(Option a) $ ./start_CES2016_ivi-shell.sh
+(Option b) $ ./start_CES2016_with_navi_ivi-shell.sh
+
+Option a: start QML UI only.
+Option b: start QML + CarNavigation:/home/navi. For the time being, CarNavigation expects to be Wayland native application, which will be showed on top of QML by using LayerManagerControl.
+

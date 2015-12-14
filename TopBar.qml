@@ -6,6 +6,7 @@
 
 import QtQuick 2.0
 import system 1.0
+import execScript 1.0
 
 Item {
     id: root
@@ -48,13 +49,38 @@ void main(void) {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: System.activeApp = "home"
+		property string file : "./switch_off_navi.sh"
+                onClicked: {
+			System.activeApp = "home"
+			execscript.execute(file)
+		}
+            }
+        }
+
+        Image {
+            source: "images/googlemaps_app_icon.png"
+
+            MouseArea {
+                anchors.fill: parent
+		property string file : "./switch_on_navi.sh"
+
+                onClicked: {
+			System.activeApp = "googlemaps"
+			execscript.execute(file)
+		}
+            }
+
+            Rectangle {
+                x: -15.5
+                y: -15
+                height: 123
+                width: 1
+                color: "black"
             }
         }
 
         Repeater {
             model: ListModel {
-                ListElement { name: "googlemaps" }
                 ListElement { name: "browser" }
                 ListElement { name: "dashboard" }
                 ListElement { name: "hvac" }
@@ -95,4 +121,6 @@ void main(void) {
         }
 
     }
+
+    ExecScript { id:execscript }
 }
