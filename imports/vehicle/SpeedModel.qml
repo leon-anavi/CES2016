@@ -16,9 +16,10 @@ Item {
         return (metric ? 1.60934 : 1 ) * value
     }
 
+    property real max:Math.ceil(mphToKph(baseMaxSpeed)/30)*30
     property real baseMaxSpeed: 255
     property real textSpeed: prop.value
-    property real percentage: textSpeed / baseMaxSpeed * 100
+    property real percentage: textSpeed / max * 100
 
     AutomotivePropertyItem {
         id: prop
