@@ -7,6 +7,7 @@
 pragma Singleton
 
 import QtQuick 2.0
+import vehicle 1.0
 
 Item {
     property bool fanUp: false
@@ -17,6 +18,8 @@ Item {
     property bool fanAuto: false
     property bool fanRecirc: false
 
+    property real fanSpeed: 0
+
     property bool defrostMax: false
     property bool defrostFront: false
     property bool defrostRear: false
@@ -26,4 +29,19 @@ Item {
 
     property int leftSeatHeat: 0
     property int rightSeatHeat: 0
+
+    onFanSpeedChanged: {
+        var currentFan = ClimateModel.getRangeValue(fanSpeed,ClimateModel.fanStepSize);
+        ClimateModel.fanSpeed = currentFan;
+    }
+
+    onLeftTemperatureChanged: {
+        var temperature = ClimateModel.getRangeValue(leftTemperature,ClimateModel.temperatureStepSize);
+        ClimateModel.leftTemp = temperature;
+    }
+
+    onRightTemperatureChanged: {
+        var temperature = ClimateModel.getRangeValue(rightTemperature,ClimateModel.temperatureStepSize);
+        ClimateModel.rightTemp = temperature;
+    }
 }

@@ -5,6 +5,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import QtQuick 2.0
+import "models"
 
 Item {
     width: childrenRect.width
@@ -47,6 +48,7 @@ Item {
 
         onPositionChanged: {
             value = Math.min(Math.max(mouse.x / fanBar.width, 0), 1)
+            HVACModel.fanSpeed = value;
         }
     }
 }
