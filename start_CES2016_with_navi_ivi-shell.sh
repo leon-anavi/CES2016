@@ -1,5 +1,8 @@
 #!/bin/sh
 
+AGL_NAVI=TRUE
+export AGL_NAVI
+
 #the following value shall be modified for your display resolution
 SCREEN_W=1080
 SCREEN_H=1920

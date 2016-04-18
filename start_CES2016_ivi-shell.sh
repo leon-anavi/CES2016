@@ -1,5 +1,8 @@
 #!/bin/sh
 
+AGL_NAVI=FALSE
+export AGL_NAVI
+
 #the following value shall be modified for your display side
 SCREEN_W=1080
 SCREEN_H=1920
