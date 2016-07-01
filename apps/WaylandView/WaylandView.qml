@@ -43,7 +43,7 @@ App {
          * is automatically drawn in this item */
         Item {
             id: waylandView
-            // 1920 - TopBar (120) - BottomBar (120) - 100
+            // 480 - TopBar (120) - BottomBar (120) - 100
             height: 1580
             width: parent.width
             Item {

@@ -10,7 +10,7 @@ import system 1.0
 
 App {
     appId: "media_player"
-    width: 1080
+    width: 640
 
     Column {
         id: col

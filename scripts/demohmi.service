@@ -6,9 +6,9 @@ After=dbus.service lightmediascanner.service rygel.service
 Type=idle
 Environment=LD_PRELOAD=/usr/lib/libEGL.so
 Environment=SCREEN_W=1080
-Environment=SCREEN_H=1920
+Environment=SCREEN_H=480
 Environment=QT_W=1080
-Environment=QT_H=1920
+Environment=QT_H=480
 Environment=WIN_TITLE_H=30
 ExecStart=/bin/sh -c "sleep 2; /usr/bin/qt5/qmlscene -I /opt/AGL/CES2016/imports /opt/AGL/CES2016/Main.qml"
 ExecStartPost=/bin/sh -c "sleep 3;layer-add-surfaces 1000 1;/usr/bin/LayerManagerControl set surface 2147483648 destination region 0 0 $SCREEN_W $SCREEN_H; /usr/bin/LayerManagerControl set surface 2147483648 source region 0 $WIN_TITLE_H $QT_W $QT_H;"

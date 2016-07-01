@@ -61,7 +61,7 @@ Item {
         ListElement { icon: "googlemaps" }
         ListElement { icon: "browser" }
         ListElement { icon: "cameras" }
-        ListElement { icon: "dashboard" }
+        /*ListElement { icon: "dashboard" }
         ListElement { icon: "nfc" }
         ListElement { icon: "media_player" }
         ListElement { icon: "fmradio" }
@@ -70,7 +70,7 @@ Item {
         ListElement { icon: "news" }
         ListElement { icon: "hvac" }
         ListElement { icon: "media_player" }
-        ListElement { icon: "browser" }
+        ListElement { icon: "browser" }*/
     }
 
     Item {
@@ -204,7 +204,7 @@ Item {
             var ydiff = 40 * (h2.cos - h.cos) + spacing
             var atan = Math.atan2(xdiff, ydiff)
             var w = Math.sqrt(xdiff*xdiff + ydiff*ydiff)
-            strand.x = 1080 * 0.5 + xval
+            strand.x = 640 * 0.5 + xval
             strand.y = (row - 1.35) * spacing + 40 * h.cos
             strand.rotation = atan * toDeg
             strand.height = w + 3
@@ -213,7 +213,7 @@ Item {
             ydiff = 40 * (h.cos - h2.cos) + spacing
             atan = Math.atan2(xdiff, ydiff)
             w = Math.sqrt(xdiff*xdiff + ydiff*ydiff)
-            strand.x = 1080 * 0.5 - xval
+            strand.x = 640 * 0.5 - xval
             strand.y = (row - 1.35) * spacing - 40 * h.cos
             strand.rotation = -atan * toDeg
             strand.height = w + 3

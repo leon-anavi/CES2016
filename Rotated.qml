@@ -7,8 +7,8 @@
 import QtQuick 2.0
 
 Item {
-    width: 1920
-    height: 1080
+    width: 480
+    height: 640
 
     Main {
         anchors.centerIn: parent

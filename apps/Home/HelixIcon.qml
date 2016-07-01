@@ -20,6 +20,8 @@ Item {
     signal clicked()
 
     Image {
+        sourceSize.width: 100
+        sourceSize.height: 100
         id: background
         x: -0.5 * width
         y: -0.5 * height
@@ -32,8 +34,8 @@ Item {
         anchors.horizontalCenterOffset: 2.5
         anchors.verticalCenterOffset: 2.5
         visible: xscale > 0
-        sourceSize.width: 300
-        sourceSize.height: 300
+        sourceSize.width: 100
+        sourceSize.height: 100
         scale: 0.5
         source: "../../images/" + name + "_app_icon.svg"
     }

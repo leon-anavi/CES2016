@@ -9,7 +9,7 @@ import "models"
 
 Item {
     id: vehicle_container
-    width: 1080
+    width: 640
     height: 912
     property alias vehicleImage: vehicle_image.source
 

@@ -7,8 +7,8 @@
 import QtQuick 2.0
 
 Item {
-    width: 1080*scale
-    height: 1920*scale
+    width: 640*scale
+    height: 480*scale
     scale: 0.5
 
     Main {

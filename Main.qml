@@ -23,8 +23,8 @@ import "apps/WaylandView"
 import system 1.0
 
 Item {
-    width: 1080
-    height: 1920
+    width: 640
+    height: 480
 
     Image {
         anchors.centerIn: parent

@@ -40,7 +40,7 @@ App {
                     color: "white"
                     font.family: "Source Sans Pro"
                     font.weight: Font.Bold
-                    font.pixelSize: 22
+                    font.pixelSize: 10
                     text: "Fuel"
                 }
 
@@ -48,7 +48,7 @@ App {
                     color: "white"
                     font.family: "Source Sans Pro"
                     font.weight: Font.Bold
-                    font.pixelSize: 45
+                    font.pixelSize: 20
                     text: FuelModel.percentage.toFixed(0) + "%"
                 }
             }
@@ -62,7 +62,7 @@ App {
                     color: "white"
                     font.family: "Source Sans Pro"
                     font.weight: Font.Bold
-                    font.pixelSize: 45
+                    font.pixelSize: 20
                     text: TemperatureModel.outdoorString
                 }
 
@@ -71,7 +71,7 @@ App {
                     color: "white"
                     font.family: "Source Sans Pro"
                     font.weight: Font.Bold
-                    font.pixelSize: 22
+                    font.pixelSize: 10
                     text: "Portland OR"
                 }
             }
@@ -90,7 +90,7 @@ App {
                     color: Style.blueViv
                     font.family: "Source Sans Pro"
                     font.weight: Font.Bold
-                    font.pixelSize: 75
+                    font.pixelSize: 36
                     text: SpeedModel.textSpeed.toFixed(0)
                 }
 
@@ -99,7 +99,7 @@ App {
                     color: Style.blueViv
                     font.family: "Source Sans Pro"
                     font.weight: Font.Bold
-                    font.pixelSize: 22
+                    font.pixelSize: 10
                     text: SpeedModel.metric ? "KM/H" : "MPH"
                 }
             }
@@ -113,7 +113,7 @@ App {
                     color: Style.blueViv
                     font.family: "Source Sans Pro"
                     font.weight: Font.Bold
-                    font.pixelSize: 22
+                    font.pixelSize: 10
                     text: "Int. Temp"
                 }
 
@@ -122,7 +122,7 @@ App {
                     color: Style.blueViv
                     font.family: "Source Sans Pro"
                     font.weight: Font.Bold
-                    font.pixelSize: 45
+                    font.pixelSize: 20
                     text: TemperatureModel.indoorString
                 }
             }

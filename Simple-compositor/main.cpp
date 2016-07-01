@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 
     compositor.setSource(QUrl::fromLocalFile(qmlFile));
     compositor.setTitle(QLatin1String("Simple Compositor"));
-    compositor.setGeometry(0, 0, 1920, 1080);
+    compositor.setGeometry(0, 0, 480, 640);
     compositor.show();
 
     return app.exec();

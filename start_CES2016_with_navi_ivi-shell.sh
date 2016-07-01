@@ -5,11 +5,11 @@ export AGL_NAVI
 
 #the following value shall be modified for your display resolution
 SCREEN_W=1080
-SCREEN_H=1920
+SCREEN_H=480
 
 #Demo is configured to FullHD
 QT_W=1080
-QT_H=1920
+QT_H=480
 
 # surface IDs. This is automatically assigned by wl-shell-emulator.so
 # from base 2147483648(0x80000000) and incremented.
