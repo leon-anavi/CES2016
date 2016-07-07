@@ -81,7 +81,7 @@ void main(void) {
 
         Repeater {
             model: ListModel {
-                ListElement { name: "browser" }
+                ListElement { name: "cameras" }
                 ListElement { name: "dashboard" }
                 ListElement { name: "hvac" }
                 ListElement { name: "weather" }
